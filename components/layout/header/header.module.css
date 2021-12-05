@@ -1,0 +1,50 @@
+.header_container{
+    background-color: var(--navy);
+    color:white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+.header_container h2{
+    margin:0;
+    cursor:pointer;
+}
+
+.hamburger_menu span{
+    display: block;
+}
+
+.hamburger_menu_line{
+    background-color: white;
+    height:3px;
+    width:25px;
+    color:white;
+    margin: 4px 0;
+    border-radius: 3px;
+}
+
+.header_list_item_container{
+    display: none;
+}
+
+@media (min-width:1024px) {
+    .header_container{
+        padding: 0 25rem;
+    }
+
+    .hamburger_menu{
+        display:none;
+    }
+
+    .header_list_item_container{
+        display:unset;
+    }
+
+    .header_list_item_container span{
+        margin: 0 2rem;
+        cursor: pointer;
+    }
+}
