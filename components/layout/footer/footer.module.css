@@ -1,10 +1,6 @@
 .footer_container{
     background-color: gray;
-    position: fixed;
-    bottom:0;
-    right:0;
-    left:0;
-    padding: 0 1rem;
+    position: relative;
     display:flex;
     height:10rem;
 }

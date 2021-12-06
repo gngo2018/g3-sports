@@ -1,9 +1,11 @@
 .home_container{
   padding:3%;
+  height:70vh;
 }
 
 @media (min-width:1024px) {
   .home_container{
-    padding: 0 25rem;
+    padding: 0 20%;
+    height:71.75vh;
   }
 }
