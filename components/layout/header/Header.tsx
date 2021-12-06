@@ -10,9 +10,9 @@ export default function Header(){
                 <span className={headerStyles.hamburger_menu_line}></span>
             </div>
             <div className={headerStyles.header_list_item_container}>
-                <span>Option 1</span>
-                <span>Option 2</span>
-                <span>Option 3</span>
+                <span>Tennis Services</span>
+                <span>About</span>
+                <span>Contact</span>
             </div>
         </div>
     )

@@ -1,6 +1,18 @@
 .footer_container{
     background-color: gray;
-    position: relative;
-    display:flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height:10rem;
+    padding: 0 25%;
+}
+
+.icon{
+    height:24px;
+}
+
+@media (min-width:1024px){
+    .footer_container{
+        padding: 0 35%;
+    }
 }
