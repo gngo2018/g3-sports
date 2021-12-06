@@ -1,0 +1,41 @@
+.about_container{
+    padding:3%;
+    padding-bottom: 25vh;
+}
+
+.about_content_flex_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_content_flex_item{
+    width:50%;
+    padding-right:3%;
+}
+
+.image_flex_item{
+    position: relative;
+    height:12rem;
+    width:50%;
+}
+
+.image_flex_item img{
+    border-radius:5px;
+}
+
+@media(min-width: 700px){
+    .image_flex_item{
+        height:25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about_container{
+        padding: 3% 20%;
+    }
+    
+    .image_flex_item{
+        height:35rem;
+    }
+
+}

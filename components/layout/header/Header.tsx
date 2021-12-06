@@ -1,8 +1,8 @@
+import Link from 'next/link'
 import { useGlobalContext } from '../../../context/MyGlobalContext'
-import MobileMenu from '../../mobilemenu/MobileMenu'
 import headerStyles from './header.module.css'
 
-export default function Header(){
+export default function Header() {
     const { menuIsOpen, setMenuIsOpen } = useGlobalContext()
 
     const handleHamburgerMenuOnClick = () => {
@@ -11,9 +11,11 @@ export default function Header(){
         console.log(menuIsOpen)
     }
 
-    return(
+    return (
         <div className={headerStyles.header_container}>
-            <h2>G3 Sports</h2>
+            <Link href="/" passHref>
+                <h2>G3 Sports</h2>
+            </Link>
             <div className={headerStyles.hamburger_menu} onClick={() => handleHamburgerMenuOnClick()}>
                 <span className={headerStyles.hamburger_menu_line}></span>
                 <span className={headerStyles.hamburger_menu_line}></span>
@@ -21,7 +23,9 @@ export default function Header(){
             </div>
             <div className={headerStyles.header_list_item_container}>
                 <span>Tennis Services</span>
-                <span>About</span>
+                <Link href="/about" passHref>
+                    <span>About</span>
+                </Link>
                 <span>Contact</span>
             </div>
         </div>

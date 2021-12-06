@@ -1,5 +1,6 @@
-import { useGlobalContext } from '../../context/MyGlobalContext'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useGlobalContext } from '../../context/MyGlobalContext'
 import mobileMenuStyles from './mobile_menu.module.css'
 
 export default function MobileMenu(){
@@ -7,8 +8,6 @@ export default function MobileMenu(){
 
     const handleExitMenuIcon = () => {
         setMenuIsOpen(!menuIsOpen);
-
-        console.log(menuIsOpen)
     }
 
     return (
@@ -19,7 +18,9 @@ export default function MobileMenu(){
             </div>
             <div className={mobileMenuStyles.mobile_menu_list_item_container}> 
                 <span>Tennis Services</span>
-                <span>About</span>
+                <Link href="/about" passHref>
+                    <span onClick={() => handleExitMenuIcon()}>About</span>
+                </Link>
                 <span>Contact</span>
             </div>
         </div>
