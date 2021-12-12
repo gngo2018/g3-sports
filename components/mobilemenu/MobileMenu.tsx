@@ -21,7 +21,9 @@ export default function MobileMenu(){
                 <Link href="/about" passHref>
                     <span onClick={() => handleExitMenuIcon()}>About</span>
                 </Link>
-                <span>Contact</span>
+                <Link href="/contact" passHref>
+                    <span onClick={() => handleExitMenuIcon()}>Contact</span>
+                </Link>
             </div>
         </div>
     );

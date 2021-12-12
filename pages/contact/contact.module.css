@@ -1,0 +1,11 @@
+.contact_container{
+    padding:3%;
+}
+
+.contact_form label, .contact_form input, .contact_form button{
+    display: block;
+}
+
+.form_input{
+    margin: 5px 0;
+}
