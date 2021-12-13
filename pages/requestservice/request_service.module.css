@@ -1,0 +1,52 @@
+.request_service_container{
+    padding:3%;
+}
+
+.request_service_form label, .request_service_form input, .request_service_form button{
+    display: block;
+    width: 97%;
+    margin: 10px 0;
+}
+
+.request_service_form select {
+    width: 50%;
+}
+
+.request_service_form button {
+    margin: 15% 0;
+    margin-left:30%;
+    width:40%;
+    height:30px;
+    border-radius: 10px;
+    border: 1px solid var(--navy);
+    background-color: var(--navy);
+    color:white;
+}
+
+.form_input{
+    margin: 5px 0;
+}
+
+@media (min-width: 700px) {
+    .request_service_container{
+        height:72vh;
+    }
+
+    .request_service_form label, .request_service_form input, .request_service_form button{
+        margin: 10px 0;
+    }
+}
+
+@media(min-width: 1024px){
+    .request_service_container{
+        height:70vh;
+        padding:0 30%;
+        margin-top:2%;
+    }
+
+    .request_service_form button {
+        margin-top: 5%;
+        margin-left: 30%;
+        cursor: pointer;
+    }
+}

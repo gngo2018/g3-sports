@@ -1,25 +1,25 @@
 import Head from 'next/head'
 import { useForm, ValidationError } from '@formspree/react'
 import ReCaptchaV2 from 'react-google-recaptcha'
-import contactStyles from './contact.module.css'
+import requestServiceStyles from './request_service.module.css'
 
-export default function Contact() {
+export default function RequestService() {
     const [form, handleSubmit] = useForm('xlezenvr');
 
     if (form.succeeded) {
-        return <p className={contactStyles.contact_container}>Form has been submitted! Your request will be responded to in 1-2 business days. Thank you for your interest in G3 Sports!</p>;
+        return <p className={requestServiceStyles.request_service_container}>Form has been submitted! Your request will be responded to in 1-2 business days. Thank you for your interest in G3 Sports!</p>;
     }
 
     return (
         <>
             <Head>
-                <title>Contact</title>
+                <title>Request Service</title>
                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             </Head>
-            <div className={contactStyles.contact_container}>
-                <h2>Contact Form!</h2>
-                <form className={contactStyles.contact_form} onSubmit={handleSubmit}>
-                    <div className={contactStyles.form_input}>
+            <div className={requestServiceStyles.request_service_container}>
+                <h2>Request Service</h2>
+                <form className={requestServiceStyles.request_service_form} onSubmit={handleSubmit}>
+                    <div className={requestServiceStyles.form_input}>
                         <label>
                             First Name
                         </label>
@@ -28,7 +28,7 @@ export default function Contact() {
                             name="firstName"
                         />
                     </div>
-                    <div className={contactStyles.form_input}>
+                    <div className={requestServiceStyles.form_input}>
                         <label>
                             Last Name
                         </label>
@@ -37,7 +37,7 @@ export default function Contact() {
                             name="lastName"
                         />
                     </div>
-                    <div className={contactStyles.form_input}>
+                    <div className={requestServiceStyles.form_input}>
                         <label>
                             Email Address
                         </label>
@@ -52,7 +52,7 @@ export default function Contact() {
                             errors={form.errors}
                         />
                     </div>
-                    <div className={contactStyles.form_input}>
+                    <div className={requestServiceStyles.form_input}>
                         <label>
                             Phone Number
                         </label>
@@ -62,7 +62,7 @@ export default function Contact() {
                             type="number"
                         />
                     </div>
-                    <div className={contactStyles.form_input}>
+                    <div className={requestServiceStyles.form_input}>
                         <label>
                             Service
                         </label>
@@ -71,7 +71,7 @@ export default function Contact() {
                             <option>Stringing</option>
                         </select>
                     </div>
-                    <div className={contactStyles.form_input}>
+                    <div className={requestServiceStyles.form_input}>
                         <label>
                             Special Requests
                         </label>

@@ -7,8 +7,6 @@ export default function Header() {
 
     const handleHamburgerMenuOnClick = () => {
         setMenuIsOpen(!menuIsOpen);
-
-        console.log(menuIsOpen)
     }
 
     return (
@@ -26,7 +24,9 @@ export default function Header() {
                 <Link href="/about" passHref>
                     <span>About</span>
                 </Link>
-                <span>Contact</span>
+                <Link href="/requestservice" passHref>
+                    <span>Request Service</span>
+                </Link>
             </div>
         </div>
     )
