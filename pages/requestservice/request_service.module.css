@@ -2,6 +2,11 @@
     padding:3%;
 }
 
+.request_service_success_container{
+    padding:3%;
+    height:64vh;
+}
+
 .request_service_form label, .request_service_form input, .request_service_form button{
     display: block;
     width: 97%;

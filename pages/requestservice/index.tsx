@@ -3,11 +3,14 @@ import { useForm, ValidationError } from '@formspree/react'
 import ReCaptchaV2 from 'react-google-recaptcha'
 import requestServiceStyles from './request_service.module.css'
 
+const formSpreeApiKey = process.env.NEXT_PUBLIC_Formspree_Api_Key + "";
+const googleCaptchaKey = process.env.NEXT_PUBLIC_Google_Captcha_Key + "";
+
 export default function RequestService() {
-    const [form, handleSubmit] = useForm('xlezenvr');
+    const [form, handleSubmit] = useForm(formSpreeApiKey);
 
     if (form.succeeded) {
-        return <p className={requestServiceStyles.request_service_container}>Form has been submitted! Your request will be responded to in 1-2 business days. Thank you for your interest in G3 Sports!</p>;
+        return <p className={requestServiceStyles.request_service_success_container}>Form has been submitted! Your request will be responded to in 1-2 business days. Thank you for your interest in G3 Sports!</p>;
     }
 
     return (
@@ -85,7 +88,7 @@ export default function RequestService() {
                             errors={form.errors}
                         />
                     </div>
-                    <ReCaptchaV2 sitekey="6LfjIZodAAAAAOm3c-GcCmC1a6wpS5Mk-4Bdd-Jt" />
+                    <ReCaptchaV2 sitekey={googleCaptchaKey} />
                     <button type="submit" disabled={form.submitting}>
                         Submit
                     </button>
