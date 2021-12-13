@@ -2,12 +2,30 @@ import Head from 'next/head'
 import { useForm, ValidationError } from '@formspree/react'
 import ReCaptchaV2 from 'react-google-recaptcha'
 import requestServiceStyles from './request_service.module.css'
-
+import { useState } from 'react';
 const formSpreeApiKey = process.env.NEXT_PUBLIC_Formspree_Api_Key + "";
 const googleCaptchaKey = process.env.NEXT_PUBLIC_Google_Captcha_Key + "";
 
+interface Service{
+    serviceName: string,
+    serviceCost: number
+}
+
 export default function RequestService() {
     const [form, handleSubmit] = useForm(formSpreeApiKey);
+    
+    const serviceArray: Service[] = [
+        {serviceName: "Stringing (String provided)", serviceCost: 15.00},
+        {serviceName: "Stringing (String needed - Syn Gut)", serviceCost: 20.00},
+        {serviceName: "Stringing (String needed - Full Poly)", serviceCost: 25.00},
+        {serviceName: "Stringing (String needed - Hybrid)", serviceCost: 25.00},
+        {serviceName: "Replacement Grip (Grip provided)", serviceCost: 5.00},
+        {serviceName: "Replacement Grip (Grip needed)", serviceCost: 10.00},
+        {serviceName: "Lead Tape", serviceCost: 10.00},
+        {serviceName: "Grip Building", serviceCost: 15.00}
+    ]
+
+    console.log(serviceArray)
 
     if (form.succeeded) {
         return <p className={requestServiceStyles.request_service_success_container}>Form has been submitted! Your request will be responded to in 1-2 business days. Thank you for your interest in G3 Sports!</p>;
@@ -70,8 +88,11 @@ export default function RequestService() {
                             Service
                         </label>
                         <select id="service" name="service">
-                            <option></option>
-                            <option>Stringing</option>
+                            {
+                                serviceArray.map(service => (
+                                    <option key={service.serviceName}>{service.serviceName}</option>
+                                ))
+                            }
                         </select>
                     </div>
                     <div className={requestServiceStyles.form_input}>

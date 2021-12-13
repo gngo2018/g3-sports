@@ -14,7 +14,8 @@
 }
 
 .request_service_form select {
-    width: 50%;
+    width: 75%;
+    height:25px;
 }
 
 .request_service_form button {
