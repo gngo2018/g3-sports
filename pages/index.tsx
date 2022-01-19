@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             <div className={styles.image}>
               <Image
                 src='/assets/tennis/regrip.jpeg'
-                alt='stringing'
+                alt='regrip'
                 layout="fill"
                 priority
               />
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
             <div className={styles.image}>
               <Image
                 src='/assets/tennis/leadtape1.jpg'
-                alt='stringing'
+                alt='lead tape'
                 layout="fill"
               />
             </div>
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
             <div className={styles.image}>
               <Image
                 src='/assets/tennis/gripbuild.jpg'
-                alt='stringing'
+                alt='grip build'
                 layout="fill"
               />
             </div>

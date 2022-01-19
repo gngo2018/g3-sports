@@ -1,0 +1,28 @@
+.services_container{
+    padding:3%;
+}
+
+.service_flex_row h3{
+    margin:0;
+}
+
+.service_flex_row{
+    display:flex;
+    justify-content: space-between;
+}
+.service_flex_item{
+    position: relative;
+    width:50%;
+    margin:1rem;
+}
+
+.image{
+    position: relative;
+    /* flex: 0 0 auto; */
+    width:100%;
+    height:150px;
+}
+
+.image img{
+    border-radius: 5px;
+}
