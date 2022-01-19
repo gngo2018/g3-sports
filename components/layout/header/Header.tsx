@@ -20,7 +20,9 @@ export default function Header() {
                 <span className={headerStyles.hamburger_menu_line}></span>
             </div>
             <div className={headerStyles.header_list_item_container}>
-                <span>Tennis Services</span>
+                <Link href="/services" passHref>
+                    <span>Tennis Services</span>
+                </Link>
                 <Link href="/about" passHref>
                     <span>About</span>
                 </Link>
