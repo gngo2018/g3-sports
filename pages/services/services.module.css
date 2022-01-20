@@ -2,6 +2,15 @@
     padding:3%;
 }
 
+.services_container h2{
+    margin-bottom: 5px;
+}
+
+.disclaimer_text{
+    color:grey;
+    font-size:12px;
+}
+
 .service_flex_row h3{
     margin:0;
 }
@@ -25,4 +34,19 @@
 
 .image img{
     border-radius: 5px;
+}
+
+@media (min-width:1024px) {
+    .services_container{
+        padding:0 20%;
+    }
+
+    .image{
+        width:100%;
+        height:350px;
+    }
+
+    .disclaimer_text{
+        font-size:14px;
+    }
 }

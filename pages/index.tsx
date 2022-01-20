@@ -62,14 +62,13 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.info_container}>
-          <div className={styles.info_flex_item}>
-            <h2>Full customization for all your tennis needs</h2>
-          </div>
-          <div>
-
-          </div>
+      </div>
+      <div className={styles.info_container}>
+        <div className={styles.info_flex_item}>
+          <h2><i>Full customization for all your tennis needs!</i></h2>
         </div>
+      </div>
+      <div className={styles.home_container}>
         {/* Consulting */}
         <h2>Consulting</h2>
         <div className={styles.consulting_container}>
